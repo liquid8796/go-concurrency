@@ -13,7 +13,9 @@ func updateMessage(s string, wg *sync.WaitGroup) {
 	msg = s
 }
 
-func printMessage() {
+func printMessage(wg *sync.WaitGroup) {
+	defer wg.Done()
+
 	fmt.Println(msg)
 }
 
@@ -32,13 +34,13 @@ func main() {
 	wg.Add(3)
 
 	go updateMessage("Hello, universe!", &wg)
-	printMessage()
+	printMessage(&wg)
 
 	go updateMessage("Hello, cosmos!", &wg)
-	printMessage()
+	printMessage(&wg)
 
 	go updateMessage("Hello, world!", &wg)
 
-	printMessage()
+	printMessage(&wg)
 	wg.Wait()
 }
