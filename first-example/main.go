@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"sync"
 )
 
 func printSomething(s string) {
@@ -9,6 +10,8 @@ func printSomething(s string) {
 }
 
 func main() {
+	var wg sync.WaitGroup
+
 	words := []string{
 		"alpha",
 		"beta",
@@ -20,6 +23,8 @@ func main() {
 		"theta",
 		"epsilon",
 	}
+
+	wg.Add(9)
 
 	for i, x := range words {
 		go printSomething(fmt.Sprintf("%d: %s", i, x))
