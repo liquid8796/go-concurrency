@@ -34,5 +34,6 @@ func main() {
 
 	wg.Wait()
 
+	wg.Add(1)
 	printSomething("This is the second thing to be printed!", &wg)
 }
