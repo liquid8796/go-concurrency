@@ -7,11 +7,12 @@ import (
 
 func printSomething(s string) {
 	fmt.Println(s)
-	time.Sleep(1 * time.Second)
 }
 
 func main() {
 	go printSomething("This is the first thing to be printed!")
+
+	time.Sleep(1 * time.Second)
 
 	printSomething("This is the second thing to be printed!")
 }
