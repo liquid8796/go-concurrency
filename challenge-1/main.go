@@ -38,6 +38,7 @@ func main() {
 	printMessage()
 
 	go updateMessage("Hello, world!", &wg)
+
 	printMessage()
 	wg.Wait()
 }
