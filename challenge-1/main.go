@@ -19,6 +19,8 @@ func printMessage(wg *sync.WaitGroup) {
 	fmt.Println(msg)
 }
 
+var wg sync.WaitGroup
+
 func main() {
 
 	// challenge: modify this code so that the calls to updateMessage() on lines
@@ -26,8 +28,6 @@ func main() {
 	// the program runs properly, and prints out three different messages.
 	// Then, write a test for all three functions in this program: updateMessage(),
 	// printMessage(), and main().
-
-	var wg sync.WaitGroup
 
 	msg = "Hello, world!"
 
