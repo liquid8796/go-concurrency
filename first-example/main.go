@@ -27,7 +27,6 @@ func main() {
 	}
 
 	wg.Add(len(words))
-	fmt.Println("wg =", wg)
 
 	for i, x := range words {
 		go printSomething(fmt.Sprintf("%d: %s", i, x), &wg)
