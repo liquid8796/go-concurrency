@@ -7,7 +7,7 @@ import (
 
 var msg string
 
-func updateMessage(s string, wg *sync.WaitGroup) {
+func updateMessage(s string) {
 	defer wg.Done()
 
 	msg = s
@@ -33,13 +33,13 @@ func main() {
 
 	wg.Add(6)
 
-	go updateMessage("Hello, universe!", &wg)
+	go updateMessage("Hello, universe!")
 	go printMessage(&wg)
 
-	go updateMessage("Hello, cosmos!", &wg)
+	go updateMessage("Hello, cosmos!")
 	go printMessage(&wg)
 
-	go updateMessage("Hello, world!", &wg)
+	go updateMessage("Hello, world!")
 
 	go printMessage(&wg)
 	wg.Wait()
