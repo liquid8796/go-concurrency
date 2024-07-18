@@ -17,7 +17,7 @@ func Test_printSomething(t *testing.T) {
 	var wg sync.WaitGroup
 	wg.Add(1)
 
-	go printSomething("epsilon1", &wg)
+	go printSomething("epsilon", &wg)
 
 	wg.Wait()
 
