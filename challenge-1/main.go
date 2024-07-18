@@ -32,13 +32,14 @@ func main() {
 	wg.Add(1)
 	go updateMessage("Hello, universe!")
 	wg.Wait()
-	go printMessage()
+	printMessage()
 
 	go updateMessage("Hello, cosmos!")
-	go printMessage()
+
+	printMessage()
 
 	go updateMessage("Hello, world!")
 
-	go printMessage()
+	printMessage()
 	wg.Wait()
 }
