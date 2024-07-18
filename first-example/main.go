@@ -10,7 +10,21 @@ func printSomething(s string) {
 }
 
 func main() {
-	go printSomething("This is the first thing to be printed!")
+	words := []string{
+		"alpha",
+		"beta",
+		"delta",
+		"gamma",
+		"pi",
+		"zeta",
+		"eta",
+		"theta",
+		"epsilon",
+	}
+
+	for i, x := range words {
+		go printSomething(fmt.Sprintf("%d: %s", i, x))
+	}
 
 	time.Sleep(1 * time.Second)
 
