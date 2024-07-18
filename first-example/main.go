@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"time"
 )
 
 func printSomething(s string) {
@@ -25,8 +24,6 @@ func main() {
 	for i, x := range words {
 		go printSomething(fmt.Sprintf("%d: %s", i, x))
 	}
-
-	time.Sleep(10)
 
 	printSomething("This is the second thing to be printed!")
 }
