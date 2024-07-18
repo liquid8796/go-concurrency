@@ -31,7 +31,7 @@ func main() {
 
 	msg = "Hello, world!"
 
-	wg.Add(3)
+	wg.Add(6)
 
 	go updateMessage("Hello, universe!", &wg)
 	printMessage(&wg)
