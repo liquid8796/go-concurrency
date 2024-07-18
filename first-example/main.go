@@ -26,7 +26,7 @@ func main() {
 		go printSomething(fmt.Sprintf("%d: %s", i, x))
 	}
 
-	time.Sleep(1 * time.Second)
+	time.Sleep(0.5 * time.Second)
 
 	printSomething("This is the second thing to be printed!")
 }
