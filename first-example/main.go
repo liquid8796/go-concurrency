@@ -26,7 +26,7 @@ func main() {
 		"epsilon",
 	}
 
-	wg.Add(len(words))
+	wg.Add(12)
 
 	for i, x := range words {
 		go printSomething(fmt.Sprintf("%d: %s", i, x), &wg)
