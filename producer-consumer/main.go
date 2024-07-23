@@ -30,6 +30,10 @@ func (p *Producer) Close() error {
 
 func pizzeria(pizzaMaker *Producer) {
 	// keep track of which pizza we are making
+	// try to make pizzas
+	for {
+
+	}
 }
 
 func main() {
