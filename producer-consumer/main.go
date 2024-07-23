@@ -22,6 +22,10 @@ type PizzaOrder struct {
 	success     bool
 }
 
+func pizzeria(pizzaMaker *Producer) {
+
+}
+
 func main() {
 	// seed the random number generator
 	rand.Seed(time.Now().UnixNano())
@@ -29,4 +33,15 @@ func main() {
 	// print out a message
 	color.Cyan("The Pizzeria is open for bussiness!")
 	color.Cyan("___________________________________")
+
+	// create a producer
+	pizzaJob := &Producer{
+		data: make(chan PizzaOrder),
+		quit: make(chan chan error),
+	}
+
+	// run the producer in the background
+	go pizzeria(pizzaJob)
+
+	//
 }
