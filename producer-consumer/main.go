@@ -12,6 +12,7 @@ type Producer struct {
 type PizzaOrder struct {
 	pizzaNumber int
 	message     string
+	success     bool
 }
 
 func main() {
