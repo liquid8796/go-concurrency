@@ -32,7 +32,7 @@ func pizzeria(pizzaMaker *Producer) {
 	// keep track of which pizza we are making
 	// try to make pizzas
 	for {
-
+		// try to make a pizza
 	}
 }
 
