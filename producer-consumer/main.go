@@ -1,5 +1,7 @@
 package main
 
+import "math/rand"
+
 const NumberOfPizzas = 10
 
 var pizzasMade, pizzasFailed, total int
@@ -17,4 +19,6 @@ type PizzaOrder struct {
 
 func main() {
 	// seed the random number generator
+	rand.Seed(65)
+
 }
