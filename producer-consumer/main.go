@@ -3,6 +3,8 @@ package main
 import (
 	"math/rand"
 	"time"
+
+	"github.com/fatih/color"
 )
 
 const NumberOfPizzas = 10
@@ -24,4 +26,6 @@ func main() {
 	// seed the random number generator
 	rand.Seed(time.Now().UnixNano())
 
+	// print out a message
+	color.Cyan("The Pizzeria is open for bussiness")
 }
