@@ -16,5 +16,5 @@ type PizzaOrder struct {
 }
 
 func main() {
-
+	// seed the random number generator
 }
