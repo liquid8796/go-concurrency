@@ -25,5 +25,4 @@ func Test_main(t *testing.T) {
 	if !strings.Contains(output, "$34320.00") {
 		t.Error("wrong balance returned")
 	}
-
 }
