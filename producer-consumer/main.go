@@ -2,4 +2,8 @@ package main
 
 const NumberOfPizzas = 10
 
-func main() {}
+var pizzasMade, pizzasFailed, total int
+
+func main() {
+
+}
