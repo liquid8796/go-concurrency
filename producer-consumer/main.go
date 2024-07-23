@@ -11,6 +11,7 @@ type Producer struct {
 
 type PizzaOrder struct {
 	pizzaNumber int
+	message     string
 }
 
 func main() {
