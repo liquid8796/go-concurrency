@@ -29,7 +29,7 @@ func (p *Producer) Close() error {
 }
 
 func pizzeria(pizzaMaker *Producer) {
-
+	// keep track of which pizza we are making
 }
 
 func main() {
