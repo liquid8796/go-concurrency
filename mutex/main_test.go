@@ -3,6 +3,7 @@ package main
 import (
 	"io"
 	"os"
+	"strings"
 	"testing"
 )
 
@@ -17,4 +18,11 @@ func Test_main(t *testing.T) {
 	_ = w.Close()
 
 	result, _ := io.ReadAll(r)
+	output := string(result)
+
+	os.Stdout = stdOut
+
+	if !strings.Contains(output, "$34320.00")
+
+
 }
