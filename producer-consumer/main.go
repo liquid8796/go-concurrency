@@ -33,6 +33,7 @@ func pizzeria(pizzaMaker *Producer) {
 	// try to make pizzas
 	for {
 		// try to make a pizza
+		// decision
 	}
 }
 
