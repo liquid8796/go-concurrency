@@ -27,5 +27,6 @@ func main() {
 	rand.Seed(time.Now().UnixNano())
 
 	// print out a message
-	color.Cyan("The Pizzeria is open for bussiness")
+	color.Cyan("The Pizzeria is open for bussiness!")
+	color.Cyan("___________________________________")
 }
