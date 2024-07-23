@@ -29,6 +29,6 @@ func Test_printSomething(t *testing.T) {
 	os.Stdout = stdOut
 
 	if !strings.Contains(output, "epsilon") {
-		t.Errorf("String not found!")
+		t.Error("String not found!")
 	}
 }
