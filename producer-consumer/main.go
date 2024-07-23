@@ -1,6 +1,9 @@
 package main
 
-import "math/rand"
+import (
+	"math/rand"
+	"time"
+)
 
 const NumberOfPizzas = 10
 
@@ -19,6 +22,6 @@ type PizzaOrder struct {
 
 func main() {
 	// seed the random number generator
-	rand.Seed(65)
+	rand.Seed(time.Now().UnixNano())
 
 }
