@@ -22,6 +22,12 @@ type PizzaOrder struct {
 	success     bool
 }
 
+func (p *Producer) Close() error {
+	ch := make(chan error)
+	p.quit <- ch
+	return <-ch
+}
+
 func pizzeria(pizzaMaker *Producer) {
 
 }
