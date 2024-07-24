@@ -115,7 +115,9 @@ func main() {
 	// create and run consumer
 	for i := range pizzaJob.data {
 		if i.pizzaNumber <= NumberOfPizzas {
-
+			if i.success {
+				color.Green(i.message)
+			}
 		}
 	}
 }
