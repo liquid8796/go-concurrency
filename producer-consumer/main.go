@@ -126,7 +126,7 @@ func main() {
 			color.Cyan("Done making pizzas...")
 			err := pizzaJob.Close()
 			if err != nil {
-				color.Red("*** Error")
+				color.Red("*** Error closing channel!")
 			}
 		}
 	}
