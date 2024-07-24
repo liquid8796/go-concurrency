@@ -82,6 +82,11 @@ func pizzeria(pizzaMaker *Producer) {
 		currentPizza := makePizza(i)
 		if currentPizza != nil {
 			i = currentPizza.pizzaNumber
+			select {
+			// we tried to make a pizza (we sent something to the data channel)
+			case pizzaMaker.data <- *currentPizza:
+
+			}
 		}
 	}
 }
