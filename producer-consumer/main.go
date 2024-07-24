@@ -134,4 +134,6 @@ func main() {
 	// print out the ending message
 	color.Cyan("-----------------")
 	color.Cyan("Done for the day.")
+
+	color.Cyan("We made %d pizzas, but failed to make %d, with %d attemps in total.")
 }
