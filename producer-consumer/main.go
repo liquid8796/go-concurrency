@@ -135,5 +135,12 @@ func main() {
 	color.Cyan("-----------------")
 	color.Cyan("Done for the day.")
 
-	color.Cyan("We made %d pizzas, but failed to make %d, with %d attemps in total.")
+	color.Cyan("We made %d pizzas, but failed to make %d, with %d attemps in total.", pizzasMade, pizzasFailed, total)
+
+	switch {
+	case pizzasFailed > 9:
+		color.Red("It was an awful day...")
+	case pizzasFailed >= 6:
+		color.Red("It was not a very good day...")
+	}
 }
