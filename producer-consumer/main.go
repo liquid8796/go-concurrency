@@ -122,6 +122,12 @@ func main() {
 				color.Red(i.message)
 				color.Red("The customer is really mad!")
 			}
+		} else {
+			color.Cyan("Done making pizzas...")
+			err := pizzaJob.Close()
+			if err != nil {
+				color.Red("*** Error")
+			}
 		}
 	}
 }
