@@ -145,6 +145,6 @@ func main() {
 	case pizzasFailed >= 2:
 		color.Red("It was a pretty good day!")
 	default:
-		color.Green("It was not a very good day...")
+		color.Green("It was a great day!")
 	}
 }
