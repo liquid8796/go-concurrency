@@ -117,6 +117,10 @@ func main() {
 		if i.pizzaNumber <= NumberOfPizzas {
 			if i.success {
 				color.Green(i.message)
+				color.Green("Order #%d is out for delivery!", i.pizzaNumber)
+			} else {
+				color.Red(i.message)
+				color.Red("The customer is really mad!")
 			}
 		}
 	}
