@@ -89,6 +89,7 @@ func pizzeria(pizzaMaker *Producer) {
 				// close channels
 				close(pizzaMaker.data)
 				close(quitChan)
+				return
 			}
 		}
 	}
