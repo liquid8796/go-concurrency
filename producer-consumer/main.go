@@ -130,4 +130,8 @@ func main() {
 			}
 		}
 	}
+
+	// print out the ending message
+	color.Cyan("----------------")
+	color.Cyan("Done for the day.")
 }
